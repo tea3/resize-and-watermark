@@ -1,0 +1,168 @@
+{
+  "camera": [
+    {
+      "exifName": "EXIF情報に入力されているカメラモデル(camera model)。node.jsではこれと一致したものを入力情報として利用する",
+      "names"   : [ "表示させるカメラ名称" ],
+      "tags"    : [ "flickrなどで入力させたいタグ" ]
+    },
+    {
+      "exifName": "ILCE-7RM2",
+      "names"   : [ "Sony α7R2" , "Sony a7R2" , "Sony A7R2" , "Sony α7RII" , "Sony a7RII" ],
+      "tags"    : [ "α7RII" , "α7R2" , "a7R2" , "A7R2" , "a7RII" , "SONY" ]
+    },
+    {
+      "exifName": "ILCE-7",
+      "names"   : [ "Sony α7" , "Sony a7" , "Sony A7" ],
+      "tags"    : [ "A7" , "α7" , "SONY" ]
+    },
+    {
+      "exifName": "NIKON D600",
+      "names"   : [ "Nikon D600" ],
+      "tags"    : [ "D600" , "NIKON" ]
+    },
+    {
+      "exifName": "NIKON D7000",
+      "names"   : [ "Nikon D7000" ],
+      "tags"    : [ "D7000" , "NIKON" ]
+    },
+    {
+      "exifName": "NIKON D7200",
+      "names"   : [ "Nikon D7200" ],
+      "tags"    : [ "D7200" , "NIKON" ]
+    }
+  ] ,
+  "lens": [
+    {
+      "exifName": "Lrに入力するキーワードタグ。FlickrのタイトルやExifのレンズ情報が不明な場合には、node.jsでこれと一致したものを入力情報として利用する",
+      "names"   : [ "レンズ名" ],
+      "tags"    : [ "flickrなどで入力させたいタグ" ],
+      "exif" : [ [ "広角端の画角を10倍したもの" , "10" ] , [ "望遠端の画角を10倍したもの" , "10" ] , [ "広角端のF値を10倍したもの。但し、F値が整数の場合には10倍しない" , "10。但し、F値が整数の場合には1" ] , [ "望遠端のF値を10倍したもの。但し、F値が整数の場合には10倍しない" , "10。但し、F値が整数の場合には1" ] ]
+    },
+    {
+      "exifName": "lens:sigma15mmFisheye",
+      "names"   : [ "SIGMA 15mm F2.8 EX DG DIAGONAL FISHEYE" ],
+      "tags"    : [ "15mm" , "fisheye" , "SIGMA" ],
+      "exif"    : [ [ 150 , 10 ] , [ 150 , 10 ] , [ 28 , 10 ] , [ 28 , 10 ] ]
+    },
+    {
+      "exifName": "lens:tamron15-30mm",
+      "names"   : [ "TAMRON SP 15-30mm F/2.8 Di VC USD" ],
+      "tags"    : [ "15-30mm" , "TAMRON" ],
+      "exif"    : [ [ 150 , 10 ] , [ 300 , 10 ] , [ 28 , 10 ] , [ 28 , 10 ] ]
+    },
+    {
+      "exifName": "lens:nikon16-35mm",
+      "names"   : [ "AF-S NIKKOR 16-35mm f/4G ED VR" ],
+      "tags"    : [ "16-35mm" , "NIKON" ],
+      "exif"    : [ [ 160 , 10 ] , [ 350 , 10 ] , [ 4 , 1 ] , [ 4 , 1 ] ]
+    },
+    {
+      "exifName": "16.0-35.0 mm f/4.0",
+      "names"   : [ "AF-S NIKKOR 16-35mm f/4G ED VR" ],
+      "tags"    : [ "16-35mm" , "NIKON" ],
+      "exif"    : [ [ 160 , 10 ] , [ 350 , 10 ] , [ 4 , 1 ] , [ 4 , 1 ] ]
+    },
+    {
+      "exifName": "lens:50mmf1.2s",
+      "names"   : [ "Ai Nikkor 50mm f/1.2S" ],
+      "tags"    : [ "50mm" , "NIKON" ],
+      "exif"    : [ [ 500 , 10 ] , [ 500 , 10 ] , [ 12 , 10 ] , [ 12 , 10 ] ]
+    },
+    {
+      "exifName": "FE 55mm F1.8 ZA",
+      "names"   : [ "SONY Sonnar T* FE 55mm F1.8 ZA" ],
+      "tags"    : [ "55mm" , "SONY" ],
+      "exif"    : [ [ 550 , 10 ] , [ 550 , 10 ] , [ 18 , 10 ] , [ 18 , 10 ] ]
+    },
+    {
+      "exifName": "FE 35mm F1.4 ZA",
+      "names"   : [ "SONY Distagon T* FE 35mm F1.4 ZA" ],
+      "tags"    : [ "35mm" , "SONY" ],
+      "exif"    : [ [ 350 , 10 ] , [ 350 , 10 ] , [ 14 , 10 ] , [ 14 , 10 ] ]
+    },
+    {
+      "exifName": "FE 85mm F1.4 GM",
+      "names"   : [ "SONY FE 85mm F1.4 GM" ],
+      "tags"    : [ "85mm" , "SONY" ],
+      "exif"    : [ [ 850 , 10 ] , [ 850 , 10 ] , [ 14 , 10 ] , [ 14 , 10 ] ]
+    },
+    {
+      "exifName": "lens:nikon85mmf1.8",
+      "names"   : [ "AF-S NIKKOR 85mm f/1.8G" ],
+      "tags"    : [ "85mm" , "NIKON" ],
+      "exif"    : [ [ 850 , 10 ] , [ 850 , 10 ] , [ 18 , 10 ] , [ 18 , 10 ] ]
+    },
+    {
+      "exifName": "85.0 mm f/1.8",
+      "names"   : [ "AF-S NIKKOR 85mm f/1.8G" ],
+      "tags"    : [ "85mm" , "NIKON" ],
+      "exif"    : [ [ 850 , 10 ] , [ 850 , 10 ] , [ 18 , 10 ] , [ 18 , 10 ] ]
+    },
+    {
+      "exifName": "FE 90mm F2.8 Macro G OSS",
+      "names"   : [ "SONY FE 90mm F2.8 Macro G OSS" ],
+      "tags"    : [ "90mm" , "SONY" , "MACRO" ],
+      "exif"    : [ [ 900 , 10 ] , [ 900 , 10 ] , [ 28 , 10 ] , [ 28 , 10 ] ]
+    },
+    {
+      "exifName": "lens:laowa105mm",
+      "names"   : [ "LAOWA 105mm F2 Bokeh Dreamer STF" ],
+      "tags"    : [ "105mm" , "STF" , "LAOWA" , "老蛙" , "VenusOptics" ],
+      "exif"    : [ [ 1050 , 10 ] , [ 1050 , 10 ] , [ 32 , 10 ] , [ 32 , 10 ] ]
+    },
+    {
+      "exifName": "lens:nikon105mmMacro",
+      "names"   : [ "AF-S VR Micro-Nikkor 105mm f/2.8G IF-ED" ],
+      "tags"    : [ "105mm" , "MACRO" , "NIKON" ],
+      "exif"    : [ [ 1050 , 10 ] , [ 1050 , 10 ] , [ 28 , 10 ] , [ 28 , 10 ] ]
+    },
+    {
+      "exifName": "105.0 mm f/2.8",
+      "names"   : [ "AF-S VR Micro-Nikkor 105mm f/2.8G IF-ED" ],
+      "tags"    : [ "105mm" , "MACRO" , "NIKON" ],
+      "exif"    : [ [ 1050 , 10 ] , [ 1050 , 10 ] , [ 28 , 10 ] , [ 28 , 10 ] ]
+    },
+    {
+      "exifName": "FE 70-200mm F4 G OSS",
+      "names"   : [ "SONY FE 70-200mm F4 G OSS" ],
+      "tags"    : [ "70-200mm" , "SONY" ],
+      "exif"    : [ [ 700 , 10 ] , [ 2000 , 10 ] , [ 4 , 1 ] , [ 4 , 1 ] ]
+    },
+    {
+      "exifName": "300.0 mm f/4.0",
+      "names"   : [ "AF-S NIKKOR 300mm f/4E PF ED VR" ],
+      "tags"    : [ "300mm" , "NIKON" ],
+      "exif"    : [ [ 3000 , 10 ] , [ 3000 , 10 ] , [ 4 , 1 ] , [ 4 , 1 ] ]
+    },
+    {
+      "exifName": "lens:nikon300mm",
+      "names"   : [ "AF-S NIKKOR 300mm f/4E PF ED VR" ],
+      "tags"    : [ "300mm" , "NIKON" ],
+      "exif"    : [ [ 3000 , 10 ] , [ 3000 , 10 ] , [ 4 , 1 ] , [ 4 , 1 ] ]
+    },
+    {
+      "exifName": "35.0 mm f/1.4",
+      "names"   : [ "SIGMA 35mm F1.4 DG HSM" ],
+      "tags"    : [ "35mm" , "SIGMA" ],
+      "exif"    : [ [ 350 , 10 ] , [ 350 , 10 ] , [ 14 , 10 ] , [ 14 , 10 ] ]
+    },
+    {
+      "exifName": "lens:sigma35mm",
+      "names"   : [ "SIGMA 35mm F1.4 DG HSM" ],
+      "tags"    : [ "35mm" , "SIGMA" ],
+      "exif"    : [ [ 350 , 10 ] , [ 350 , 10 ] , [ 14 , 10 ] , [ 14 , 10 ] ]
+    },
+    {
+      "exifName": "lens:sigma24mm",
+      "names"   : [ "SIGMA 24mm F1.4 DG HSM" ],
+      "tags"    : [ "24mm" , "SIGMA" ],
+      "exif"    : [ [ 240 , 10 ] , [ 240 , 10 ] , [ 14 , 10 ] , [ 14 , 10 ] ]
+    },
+    {
+      "exifName": "E 21mm F2.8",
+      "names"   : [ "Carl Zeiss Loxia 21mm F2.8" ],
+      "tags"    : [ "21mm" , "CarlZeiss" ],
+      "exif"    : [ [ 210 , 10 ] , [ 210 , 10 ] , [ 28 , 10 ] , [ 28 , 10 ] ]
+    }
+  ]
+}

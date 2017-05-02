@@ -1,0 +1,32 @@
+{
+  "position": [
+    {
+      "keywords"    : "Lightroomのキーワードで指定するポジション名。(例)pos:top-right、pos:bottom-center ※指定方法はハイフン区切りで順不同",
+      "tags"        : "imagemagickで適用したいポジション(-gravity)"
+    },
+    {
+      "keywords"    : "top" ,
+      "tags"        : "North"
+    },
+    {
+      "keywords"    : "middle",
+      "tags"        : ""
+    },
+    {
+      "keywords"    : "bottom" ,
+      "tags"        : "South"
+    },
+    {
+      "keywords"    : "left" ,
+      "tags"        : "West"
+    },
+    {
+      "keywords"    : "center" ,
+      "tags"        : ""
+    },
+    {
+      "keywords"    : "right" ,
+      "tags"        : "East"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "resize-and-watermark",
+  "version": "1.0.0",
+  "description": "Batch image resizing and adding watermark for node.js",
+  "main": "index.js",
+  "keywords": [
+    "resize",
+    "watermark",
+    "exif",
+    "iptc",
+    "xmp" ,
+    "lightroom",
+    "oldlens"
+  ],
+  "author": "tea3",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "exif-reader": "^1.0.2",
+    "image-size": "^0.5.1",
+    "imagemagick": "^0.1.3",
+    "js-yaml": "^3.8.3",
+    "mkdirp": "^0.5.1",
+    "node-filelist": "0.0.1",
+    "node-iptc": "^1.0.4",
+    "object-assign": "^4.1.1",
+    "piexifjs": "^1.0.3"
+  }
+}
