@@ -13,6 +13,7 @@ Install with git and npm
 
 ```
 git clone https://github.com/tea3/resize-and-watermark.git
+cd resize-and-watermark
 npm install
 ```
 
