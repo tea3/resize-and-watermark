@@ -13,6 +13,10 @@ This project efficiently help to process photo.
 
 ![addExif](src/exif.jpg)
 
+## DEMO
+
+[https://www.flickr.com/photos/masakazu-tea/33625299194/](https://www.flickr.com/photos/masakazu-tea/33625299194/)
+
 ## Install
 
 Install with [git](https://git-scm.com/) and [npm](https://docs.npmjs.com/getting-started/installing-node)
