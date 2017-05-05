@@ -48,28 +48,28 @@ Confirm that ImageMagick is properly set up by executing `convert -help` in a te
 For example, please create `_config.yml` as follows.
 
 ```
-resizePix:								# resize task option
-  - 0									# no resize (original size)
-  - 1024								# resize images 1024 pixels
-  - 2048								# resize images 2048 pixels
-# ignoreWatermark:						# If you don't want to add watermark , enable option as following.
+resizePix:                              # resize task option
+  - 0                                   # no resize (original size)
+  - 1024                                # resize images 1024 pixels
+  - 2048                                # resize images 2048 pixels
+# ignoreWatermark:                      # If you don't want to add watermark , enable option as following.
 #   - 0
 #   - 1024
-readDir:								# Folder name including image to resize
+readDir:                                # Folder name including image to resize
   - ./sample JPG/targetFolder
-distDir: ./sample JPG/resizedFolder		# Path where you want to output the resized image
-watermark: ./sample JPG/watermark.png	# File path of watermark image
-watermarkWidthRate : 0.1				# The size of the image occupied by the watermark
-watermarkMarginRate: 0.02				# Watermark margin
-quality: 97								# JPEG quality value
+distDir: ./sample JPG/resizedFolder     # Path where you want to output the resized image
+watermark: ./sample JPG/watermark.png   # File path of watermark image
+watermarkWidthRate : 0.1                # The size of the image occupied by the watermark
+watermarkMarginRate: 0.02               # Watermark margin
+quality: 97                             # JPEG quality value
 
-fileTitle: My Picture					# Always a character string to be included in the IPTC title meta field
-constTag:								# Always a character string to be included in the IPTC keywords meta field
+fileTitle: My Picture                   # Always a character string to be included in the IPTC title meta field
+constTag:                               # Always a character string to be included in the IPTC keywords meta field
   - photo
   - animal
   - etc
-copyright: (c) your-name				# Always a character string to be included in the Exif copyright field
-descriptionTemplate : desciption		# Always a character string to be included in the Exif desciption field
+copyright: (c) your-name                # Always a character string to be included in the Exif copyright field
+descriptionTemplate : desciption        # Always a character string to be included in the Exif desciption field
 ```
 
 Then run node.js. Must install NodeJS from https://nodejs.org/ beforehand to launch with "node index.js"
