@@ -7,6 +7,12 @@ This project efficiently help to process photo.
 - inputs Exif and IPTC titles and descriptions
 
 
+![command](src/command.png)
+
+![addWatermark](src/watermark.jpg)
+
+![addExif](src/exif.jpg)
+
 ## Install
 
 Install with [git](https://git-scm.com/) and [npm](https://docs.npmjs.com/getting-started/installing-node)
