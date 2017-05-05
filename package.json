@@ -1,5 +1,5 @@
 {
-  "name": "resize-and-watermark",
+  "name": "resize-mark",
   "version": "1.0.0",
   "description": "Batch image resizing and adding watermark for node.js",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "watermark",
     "exif",
     "iptc",
-    "xmp" ,
+    "xmp",
     "lightroom",
     "oldlens"
   ],
@@ -24,6 +24,7 @@
     "node-filelist": "0.0.1",
     "node-iptc": "^1.0.4",
     "object-assign": "^4.1.1",
-    "piexifjs": "^1.0.3"
+    "piexifjs": "^1.0.3",
+    "probe-image-size": "^3.0.0"
   }
 }

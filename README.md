@@ -9,7 +9,7 @@ This project efficiently help to process photo.
 
 ## Install
 
-Install with git and npm
+Install with [git](https://git-scm.com/) and [npm](https://docs.npmjs.com/getting-started/installing-node)
 
 ```
 git clone https://github.com/tea3/resize-and-watermark.git
@@ -48,31 +48,31 @@ Confirm that ImageMagick is properly set up by executing `convert -help` in a te
 For example, please create `_config.yml` as follows.
 
 ```
-resizePix:              # resize task option
-  - 0                   # no resize (original size)
-  - 1024                # resize images 1024 pixels
-  - 2048                # resize images 2048 pixels
-# ignoreWatermark:      # If you don't want to add watermark , enable option as following.
+resizePix:								# resize task option
+  - 0									# no resize (original size)
+  - 1024								# resize images 1024 pixels
+  - 2048								# resize images 2048 pixels
+# ignoreWatermark:						# If you don't want to add watermark , enable option as following.
 #   - 0
 #   - 1024
-readDir:                              # Folder name including image to resize
+readDir:								# Folder name including image to resize
   - ./sample JPG/targetFolder
-distDir: ./sample JPG/resizedFolder   # Path where you want to output the resized image
-watermark: ./sample JPG/watermark.png # File path of watermark image
-watermarkWidthRate : 0.1              # The size of the image occupied by the watermark
-watermarkMarginRate: 0.02             # Watermark margin
-quality: 97                           # JPEG quality value
+distDir: ./sample JPG/resizedFolder		# Path where you want to output the resized image
+watermark: ./sample JPG/watermark.png	# File path of watermark image
+watermarkWidthRate : 0.1				# The size of the image occupied by the watermark
+watermarkMarginRate: 0.02				# Watermark margin
+quality: 97								# JPEG quality value
 
-fileTitle: My Picture                 # Always a character string to be included in the IPTC title meta field
-constTag:                             # Always a character string to be included in the IPTC keywords meta field
+fileTitle: My Picture					# Always a character string to be included in the IPTC title meta field
+constTag:								# Always a character string to be included in the IPTC keywords meta field
   - photo
   - animal
   - etc
-copyright: (c) your-name            # Always a character string to be included in the Exif copyright field
-descriptionTemplate : desciption    # Always a character string to be included in the Exif desciption field
+copyright: (c) your-name				# Always a character string to be included in the Exif copyright field
+descriptionTemplate : desciption		# Always a character string to be included in the Exif desciption field
 ```
 
-Then run node.js.
+Then run node.js. Must install NodeJS from https://nodejs.org/ beforehand to launch with "node index.js"
 
 ```
 $ node index.js
@@ -121,21 +121,25 @@ When resizing, lens information can be entered automatically by keyword.
 For example, if you want to use Lightroom's Export Action, please describe Apple Script in Automator as follows.
 
 ```
+
 function run(input, parameters) {
 
 	var sys = Application("System Events");
-	var cdm = "cd \"$HOME/Desktop/you-cloned-dir/resize-and-watermark\"";
+	var cdm = "cd \"$HOME/Desktop/your-cloned-dir/resize-and-watermark\"";
 	var nvm = "nvm use 4.3.0";
 
+	delay(5)
 	var Terminal = Application('Terminal')
+	delay(15)
+
 	Terminal.activate()
 	var terW1 = Terminal.windows[0]
+	delay(15)
 
-	delay(2)
 	Terminal.doScript( cdm , {in: terW1} )
 	delay(5)
 	Terminal.doScript( nvm , {in: terW1} )
-	delay(5)
+	delay(10)
 	Terminal.doScript( "node index.js" , {in: terW1} )
 
   	return input;
