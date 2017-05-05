@@ -37,8 +37,8 @@ brew install imagemagick exiftool
 
 Windows & others:
 
-[http://www.imagemagick.org/script/binary-releases.php](http://www.imagemagick.org/script/binary-releases.php)
-[http://www.sno.phy.queensu.ca/~phil/exiftool/](http://www.sno.phy.queensu.ca/~phil/exiftool/)
+- imagemagick : [http://www.imagemagick.org/script/binary-releases.php](http://www.imagemagick.org/script/binary-releases.php)
+- exiftool : [http://www.sno.phy.queensu.ca/~phil/exiftool/](http://www.sno.phy.queensu.ca/~phil/exiftool/)
 
 Confirm that ImageMagick is properly set up by executing `convert -help` in a terminal.
 
