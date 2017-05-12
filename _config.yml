@@ -11,6 +11,15 @@ distDir: ./sample JPG/resizedFolder   # Path where you want to output the resize
 watermark: ./sample JPG/watermark.png # File path of watermark image
 watermarkWidthRate : 0.1              # The size of the image occupied by the watermark
 watermarkMarginRate: 0.02             # Watermark margin
+# defaultWatermarkPosition:           # Default position of watermark
+#   - North
+#   - West
+# watermarkColor: auto                # Watermark Color Overlay (e.g. : auto , 00FFFF , FF00FF , FFFF00 , red , green , blue , ...)
+# watermarkColorSelectionWeight:      # Criteria for choosing the color of the watermark
+#   - 1.0                             # Hue difference
+#   - 1.0                             # Saturation difference
+#   - 4.0                             # Luminance difference
+# defaultLens: lens:laowa105mm        # Lens keyword to enter when there is no Exif
 quality: 97                           # JPEG quality value
 
 fileTitle: My Picture                 # Always a character string to be included in the IPTC title meta field
@@ -20,3 +29,15 @@ constTag:                             # Always a character string to be included
   - etc
 copyright: (c) your-name            # Always a character string to be included in the Exif copyright field
 descriptionTemplate : desciption    # Always a character string to be included in the Exif desciption field
+
+
+fileTitle: タイトル
+resizePix:
+  - 0
+  - 1024
+# ignoreWatermark:
+#   - 1024
+readDir:
+  - ../../sample JPG/target
+distDir: ../../sample JPG/resize
+watermark: ../../sample JPG/watermark.png

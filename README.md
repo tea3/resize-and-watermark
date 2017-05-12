@@ -13,9 +13,39 @@ This project efficiently help to process photo.
 
 ![addExif](src/exif.jpg)
 
-## DEMO
+## Example of use
 
-[https://www.flickr.com/photos/masakazu-tea/33625299194/](https://www.flickr.com/photos/masakazu-tea/33625299194/)
+- [https://www.flickr.com/photos/masakazu-tea/33625299194/](https://www.flickr.com/photos/masakazu-tea/33625299194/)
+- [https://www.flickr.com/photos/tags/tea81p](https://www.flickr.com/photos/tags/tea81p)
+
+
+### Install ImageMagick and ExifTool and Cairo
+
+> Resizing images made easy - thanks to [ImageMagick](http://www.imagemagick.org/) and [ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/) .
+
+Make sure ImageMagick and ExifTool and Cairo is installed on your system and properly set up in your `PATH`.
+
+Ubuntu:
+
+```shell
+apt-get install imagemagick exiftool libcairo2-dev
+```
+
+Mac OS X (using [Homebrew](http://brew.sh/)):
+
+```shell
+brew install imagemagick exiftool
+brew install cairo --use-gcc
+```
+
+Windows & others:
+
+- imagemagick : [http://www.imagemagick.org/script/binary-releases.php](http://www.imagemagick.org/script/binary-releases.php)
+- exiftool : [http://www.sno.phy.queensu.ca/~phil/exiftool/](http://www.sno.phy.queensu.ca/~phil/exiftool/)
+- cairo : [https://cairographics.org/download/](https://cairographics.org/download/)
+
+Confirm that ImageMagick is properly set up by executing `convert -help` in a terminal.
+
 
 ## Install
 
@@ -26,32 +56,6 @@ git clone https://github.com/tea3/resize-and-watermark.git
 cd resize-and-watermark
 npm install
 ```
-
-### Install ImageMagick and ExifTool
-
-> Resizing images made easy - thanks to [ImageMagick](http://www.imagemagick.org/) and [ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/) .
-
-Make sure ImageMagick and ExifTool is installed on your system and properly set up in your `PATH`.
-
-Ubuntu:
-
-```shell
-apt-get install imagemagick exiftool
-```
-
-Mac OS X (using [Homebrew](http://brew.sh/)):
-
-```shell
-brew install imagemagick exiftool
-```
-
-Windows & others:
-
-- imagemagick : [http://www.imagemagick.org/script/binary-releases.php](http://www.imagemagick.org/script/binary-releases.php)
-- exiftool : [http://www.sno.phy.queensu.ca/~phil/exiftool/](http://www.sno.phy.queensu.ca/~phil/exiftool/)
-
-Confirm that ImageMagick is properly set up by executing `convert -help` in a terminal.
-
 
 ## Usage
 
@@ -71,6 +75,16 @@ distDir: ./sample JPG/resizedFolder     # Path where you want to output the resi
 watermark: ./sample JPG/watermark.png   # File path of watermark image
 watermarkWidthRate : 0.1                # The size of the image occupied by the watermark
 watermarkMarginRate: 0.02               # Watermark margin
+# defaultWatermarkPosition:             # Default position of watermark
+#   - North
+#   - West
+# watermarkColor: auto                  # Watermark Color Overlay (e.g. : auto , 00FFFF , FF00FF , FFFF00 , red , green , blue , ...)
+# watermarkColorSelectionWeight:       # Criteria for choosing the color of the watermark
+#   - 1.0                               # Hue difference
+#   - 1.0                               # Saturation difference
+#   - 4.0                               # Luminance difference
+# defaultLens: lens:laowa105mm          # Lens keyword to enter when there is no Exif
+
 quality: 97                             # JPEG quality value
 
 fileTitle: My Picture                   # Always a character string to be included in the IPTC title meta field
