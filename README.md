@@ -9,14 +9,11 @@ This project efficiently help to process photo.
 
 ![command](src/command.png)
 
-![addWatermark](src/watermark.jpg)
-
-![addExif](src/exif.jpg)
 
 ## Example of use
 
 - [https://www.flickr.com/photos/masakazu-tea/33625299194/](https://www.flickr.com/photos/masakazu-tea/33625299194/)
-- [https://www.flickr.com/photos/tags/tea81p](https://www.flickr.com/photos/tags/tea81p)
+- [Other photos](https://www.flickr.com/photos/tags/tea81p)
 
 
 ### Install ImageMagick and ExifTool and Cairo
@@ -99,13 +96,13 @@ descriptionTemplate : desciption        # Always a character string to be includ
 Then run node.js. Must install NodeJS from https://nodejs.org/ beforehand to launch with "node index.js"
 
 ```
-$ node index.js
+$ node index.js resize
 ```
 
 or 
 
 ```
-$ node index.js image1.jpg image2.jpg ...
+$ node index.js resize image1.jpg image2.jpg ...
 ```
 
 ## Control with keywords and Exif
@@ -115,6 +112,8 @@ You can customize processing with with photo included keywords and exif. For exa
 - [How to use keywords in Lightroom](https://helpx.adobe.com/lightroom/help/keywords.html)
 
 ### watermark position
+
+![addWatermark](src/watermark.jpg)
 
 You can customize the position of the watermark based on `pos:****-****` keywords .
 
@@ -126,9 +125,25 @@ You can customize the position of the watermark based on `pos:****-****` keyword
 | `pos:bottom-right` | SouthEast |
 | `pos:middle-center` | Center |
 
+You can change keywords from Photoshop or [Lightroom]((https://helpx.adobe.com/lightroom/help/keywords.html)), but you can also change them with the following commands.
+
+```
+$ node index.js position image1.jpg bottom right
+```
+
+or 
+
+```
+$ node index.js position image1.jpg bottom right image1.jpg image2.jpg ...
+```
+
+
 Also , you can customize position rule . if you want to customize , please edit `settings/watermarkPosition.json`.
 
+
 ### Manual input of lens information ( Exif and IPTC title )
+
+![addExif](src/exif.jpg)
 
 When resizing, lens information can be entered automatically by keyword.
 
@@ -136,6 +151,19 @@ When resizing, lens information can be entered automatically by keyword.
 | :---: | :---: |
 | `lens:50mmf1.2s` | Ai Nikkor 50mm f/1.2S |
 | `lens:laowa105mm` | LAOWA 105mm F2 Bokeh Dreamer STF |
+
+You can change keywords from Photoshop or [Lightroom]((https://helpx.adobe.com/lightroom/help/keywords.html)), but you can also change them with the following commands.
+
+```
+$ node index.js lens image1.jpg laowa105mm
+```
+
+or 
+
+```
+$ node index.js lens image1.jpg laowa105mm image1.jpg image2.jpg ...
+```
+
 
  Also , you can customize lens rule . if you want to customize , please edit `settings/cameraLens.json`.
 
@@ -152,9 +180,9 @@ function run(input, parameters) {
 	var cdm = "cd \"$HOME/Desktop/your-cloned-dir/resize-and-watermark\"";
 	var nvm = "nvm use 4.3.0";
 
-	delay(5)
+	delay(10)
 	var Terminal = Application('Terminal')
-	delay(15)
+	delay(30)
 
 	Terminal.activate()
 	var terW1 = Terminal.windows[0]
@@ -164,7 +192,7 @@ function run(input, parameters) {
 	delay(5)
 	Terminal.doScript( nvm , {in: terW1} )
 	delay(10)
-	Terminal.doScript( "node index.js" , {in: terW1} )
+	Terminal.doScript( "node index.js resize" , {in: terW1} )
 
   	return input;
 }
