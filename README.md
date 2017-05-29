@@ -18,7 +18,7 @@ This project efficiently help to process photo.
 
 ### Install ImageMagick and ExifTool and Cairo
 
-> Resizing images made easy - thanks to [ImageMagick](http://www.imagemagick.org/) and [ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/) .
+> Resizing images made easy - thanks to [ImageMagick](http://www.imagemagick.org/) and [ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/) and [Cairo](https://cairographics.org/) .
 
 Make sure ImageMagick and ExifTool and Cairo is installed on your system and properly set up in your `PATH`.
 
@@ -69,7 +69,7 @@ resizePix:                              # resize task option
 readDir:                                # Folder name including image to resize
   - ./sample JPG/targetFolder
 distDir: ./sample JPG/resizedFolder     # Path where you want to output the resized image
-watermark: ./sample JPG/watermark.png   # File path of watermark image
+watermark: src/sample-watermark.png     # File path of watermark image
 watermarkWidthRate : 0.1                # The size of the image occupied by the watermark
 watermarkMarginRate: 0.02               # Watermark margin
 # defaultWatermarkPosition:             # Default position of watermark
@@ -99,10 +99,10 @@ Then run node.js. Must install NodeJS from https://nodejs.org/ beforehand to lau
 $ node index.js resize
 ```
 
-or 
+or
 
 ```
-$ node index.js resize image1.jpg image2.jpg ...
+$ node index.js r
 ```
 
 ## Control with keywords and Exif
@@ -128,13 +128,7 @@ You can customize the position of the watermark based on `pos:****-****` keyword
 You can change keywords from Photoshop or [Lightroom]((https://helpx.adobe.com/lightroom/help/keywords.html)), but you can also change them with the following commands.
 
 ```
-$ node index.js position image1.jpg bottom right
-```
-
-or 
-
-```
-$ node index.js position image1.jpg bottom right image1.jpg image2.jpg ...
+$ node index.js position bottom right image1.jpg image2.jpg ...
 ```
 
 
@@ -155,13 +149,7 @@ When resizing, lens information can be entered automatically by keyword.
 You can change keywords from Photoshop or [Lightroom]((https://helpx.adobe.com/lightroom/help/keywords.html)), but you can also change them with the following commands.
 
 ```
-$ node index.js lens image1.jpg laowa105mm
-```
-
-or 
-
-```
-$ node index.js lens image1.jpg laowa105mm image1.jpg image2.jpg ...
+$ node index.js lens laowa105mm image1.jpg image2.jpg ...
 ```
 
 

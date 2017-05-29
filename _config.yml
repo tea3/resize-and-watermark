@@ -1,36 +1,3 @@
-resizePix:              # resize task option
-  - 0                   # no resize (original size)
-  - 1024                # resize images 1024 pixels
-  - 2048                # resize images 2048 pixels
-# ignoreWatermark:      # If you don't want to add watermark , enable option as following.
-#   - 0
-#   - 1024
-readDir:                              # Folder name including image to resize
-  - ./sample JPG/targetFolder
-distDir: ./sample JPG/resizedFolder   # Path where you want to output the resized image
-watermark: ./sample JPG/watermark.png # File path of watermark image
-watermarkWidthRate : 0.1              # The size of the image occupied by the watermark
-watermarkMarginRate: 0.02             # Watermark margin
-# defaultWatermarkPosition:           # Default position of watermark
-#   - North
-#   - West
-# watermarkColor: auto                # Watermark Color Overlay (e.g. : auto , 00FFFF , FF00FF , FFFF00 , red , green , blue , ...)
-# watermarkColorSelectionWeight:      # Criteria for choosing the color of the watermark
-#   - 1.0                             # Hue difference
-#   - 1.0                             # Saturation difference
-#   - 4.0                             # Luminance difference
-# defaultLens: lens:laowa105mm        # Lens keyword to enter when there is no Exif
-quality: 97                           # JPEG quality value
-
-fileTitle: My Picture                 # Always a character string to be included in the IPTC title meta field
-constTag:                             # Always a character string to be included in the IPTC keywords meta field
-  - photo
-  - animal
-  - etc
-copyright: (c) your-name            # Always a character string to be included in the Exif copyright field
-descriptionTemplate : desciption    # Always a character string to be included in the Exif desciption field
-
-
 fileTitle: タイトル
 resizePix:
   - 0
@@ -40,4 +7,20 @@ resizePix:
 readDir:
   - ../../sample JPG/target
 distDir: ../../sample JPG/resize
-watermark: ../../sample JPG/watermark.png
+watermark: src/sample-watermark.png
+# defaultWatermarkPosition:
+#   - North
+#   - West
+# watermarkColor: auto
+# watermarkColorSelectionWeight:
+#   - 1.0
+#   - -0.5
+#   - 1.5
+# defaultLens: lens:laowa105mm
+constTag:
+  - tea81p
+quality: 97
+watermarkWidthRate : 0.1
+watermarkMarginRate: 0.02
+copyright: (c) tea ( @tea0828 )
+descriptionTemplate : <a href="https://www.facebook.com/masashibat/" rel="nofollow">Facebook</a> | <a href="https://twitter.com/tea0828" rel="nofollow">Twitter</a> | <a href="https://www.instagram.com/gogo_tea/" rel="nofollow">Instagram</a>

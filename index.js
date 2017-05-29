@@ -36,14 +36,14 @@ let processComplate = (inObj) => {
 
 
 // Change watermark postion keyword (IPTC Keyword)
-let changeWatermarkPos = (fileName , pos1 , pos2 , files) => {
+let changeWatermarkPos = (pos1 , pos2 , files) => {
   
   let envFileList = [];
   if(files && files.length && files.length > 0)
     for( let i = 0; i < files.length; i++)
       envFileList.push(files[i])
   
-  ry_p.readConfigYAML( envFileList , pos1 , pos2 , fileName )
+  ry_p.readConfigYAML( envFileList , pos1 , pos2 )
     .then( fl.fileList )
     .then( ge.getExif )
     .then( ct_p.createResizeTask )
@@ -54,25 +54,35 @@ let changeWatermarkPos = (fileName , pos1 , pos2 , files) => {
 
 
 // Change lens keyword (IPTC Keyword)
-let changeLens = (fileName , lensKeyword , files) => {
+let changeLens = (lensKeyword , files) => {
+  
+  console.time('process time')
   
   let envFileList = [];
   if(files && files.length && files.length > 0)
     for( let i = 0; i < files.length; i++)
       envFileList.push(files[i])
   
-  ry_l.readConfigYAML( envFileList , lensKeyword , fileName )
+  ry_l.readConfigYAML( envFileList , lensKeyword )
     .then( fl.fileList )
     .then( ge.getExif )
     .then( ct_p.createResizeTask )
     .then( exi.editXmpAndIPTC )
     .then( processComplate )
-    // .catch( e => { console.error('\u001b[31m' + e + "\u001b[0m") } )
+    .then( (inObj) => {
+      return new Promise( (resolve , reject) => {
+        console.timeEnd("process time")
+        resolve(inObj)
+      })
+    })
+    .catch( e => { console.error('\u001b[31m' + e + "\u001b[0m") } )
 }
 
 
 // resize and watermark
 let resizeAndWatermark = (files) => {
+  
+  console.time('process time')
   
   let envFileList = [];
   if(files && files.length && files.length > 0)
@@ -99,6 +109,12 @@ let resizeAndWatermark = (files) => {
     // // .then( de.debugExif )
     // // .then( dp.debugParam )
     .then( processComplate )
+    .then( (inObj) => {
+      return new Promise( (resolve , reject) => {
+        console.timeEnd("process time")
+        resolve(inObj)
+      })
+    })
     .catch( e => { console.error('\u001b[31m' + e + "\u001b[0m") } )
 }
 
@@ -110,34 +126,34 @@ pg
   .on('--help', () => {
     console.log('  Examples:');
     console.log();
-    console.log('    $ resize');
-    console.log('    $ r file1 file2 ...');
+    console.log('    $ node index.js resize');
+    console.log('    $ node index.js r file1.jpg file2.jpg ...');
     console.log();
   });
 
 pg
-  .command('position <fileName> <pos1> <pos2> [files...]')
+  .command('position <pos1> <pos2> [files...]')
   .alias('p')
   .description('Change watermark postion keyword (IPTC Keyword)')
   .action( changeWatermarkPos )
   .on('--help', () => {
     console.log('  Examples:');
     console.log();
-    console.log('    $ position a.jpg left top');
-    console.log('    $ p b.jpg center middle');
+    console.log('    $ node index.js position left top file1.jpg file2.jpg ...');
+    console.log('    $ node index.js p center middle file1.js file2.jpg ...');
     console.log();
   });
   
 pg
-  .command('lens <fileName> <lensKeyword> [files...]')
+  .command('lens <lensKeyword> [files...]')
   .alias('l')
   .description('Change lens keyword (IPTC Keyword)')
   .action( changeLens )
   .on('--help', () => {
     console.log('  Examples:');
     console.log();
-    console.log('    $ lens a.jpg laowa105mm');
-    console.log('    $ p b.jpg laowa105mm');
+    console.log('    $ node index.js lens laowa105mm file1.jpg file2.jpg ...');
+    console.log('    $ node index.js p laowa105mm file1.jpg file2.jpg ...');
     console.log();
   });
 
