@@ -6,9 +6,9 @@ This project efficiently help to process photo.
 - add watermark
 - inputs Exif and IPTC titles and descriptions
 
-
 ![command](src/command.png)
 
+docment: [Lightroomの後処理から数種類のリサイズと、ウォーターマークを一括処理するNode.jsを書いてみた](https://tea3.github.io/p/17/lightroom-resize-and-watermark-nodejs)
 
 ## Example of use
 
@@ -161,27 +161,36 @@ $ node index.js lens laowa105mm image1.jpg image2.jpg ...
 For example, if you want to use Lightroom's Export Action, please describe Apple Script in Automator as follows.
 
 ```
-
 function run(input, parameters) {
+  
+  var cdm = "cd \"$HOME/Desktop/your-cloned-dir/resize-and-watermark\"";
+  var nvm = "nvm use 4.3.0";
 
-	var sys = Application("System Events");
-	var cdm = "cd \"$HOME/Desktop/your-cloned-dir/resize-and-watermark\"";
-	var nvm = "nvm use 4.3.0";
+  var Terminal = Application('Terminal')
+  Terminal.activate()
+  var terW1 = Terminal.windows[0]
+  try{
+    console.log(terW1.selectedTab.properties())
+  }catch(e){
+    Terminal.doScript("echo 'Hi terminal window 1'");
+    terW1 = Terminal.windows[0]
+  }
+  waitDelay(terW1)
 
-	delay(10)
-	var Terminal = Application('Terminal')
-	delay(30)
+  Terminal.doScript( cdm , {in: terW1} )
+  waitDelay(terW1)
+  Terminal.doScript( nvm , {in: terW1} )
+  waitDelay(terW1)
+  Terminal.doScript( "node index.js resize" , {in: terW1} )
+  waitDelay(terW1)
+  
+    return input;
+}
 
-	Terminal.activate()
-	var terW1 = Terminal.windows[0]
-	delay(15)
-
-	Terminal.doScript( cdm , {in: terW1} )
-	delay(5)
-	Terminal.doScript( nvm , {in: terW1} )
-	delay(10)
-	Terminal.doScript( "node index.js resize" , {in: terW1} )
-
-  	return input;
+function waitDelay(inTerminalWindow){
+  delay(1)
+  while( inTerminalWindow.selectedTab.busy() ){
+    delay(1)
+  }
 }
 ```
