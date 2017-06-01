@@ -31,7 +31,8 @@ apt-get install imagemagick exiftool libcairo2-dev
 Mac OS X (using [Homebrew](http://brew.sh/)):
 
 ```shell
-brew install imagemagick exiftool
+brew install imagemagick --disable-openmp
+brew install exiftool
 brew install cairo --use-gcc
 ```
 
