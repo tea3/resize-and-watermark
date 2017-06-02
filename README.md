@@ -77,7 +77,9 @@ watermarkMarginRate: 0.02               # Watermark margin
 #   - North
 #   - West
 # watermarkColor: auto                  # Watermark Color Overlay (e.g. : auto , 00FFFF , FF00FF , FFFF00 , red , green , blue , ...)
-# watermarkColorSelectionWeight:       # Criteria for choosing the color of the watermark
+# colorTiefQuality: 50                  # If watermarkColor is auto, determine the quality to calculate the color. ( 1: High Quality and very slow , 10: Normal Quality and slow , 50: Reasonable quality and fast )
+# colorTiefQuality_watermarkArea: 1     #
+# watermarkColorSelectionWeight:        # Criteria for choosing the color of the watermark
 #   - 1.0                               # Hue difference
 #   - 1.0                               # Saturation difference
 #   - 4.0                               # Luminance difference

@@ -12,6 +12,8 @@ watermark: src/sample-watermark.png
 #   - North
 #   - West
 # watermarkColor: auto
+# colorTiefQuality: 50
+# colorTiefQuality_watermarkArea: 1
 # watermarkColorSelectionWeight:
 #   - 1.0
 #   - -0.5
