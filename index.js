@@ -1,6 +1,7 @@
 "use strict";
 
 const pg      = require('commander');
+const util    = require('./lib/util.js')
 const ry      = require('./lib/readYml.js')
 const ry_p    = require('./lib/readYml-pos.js')
 const ry_l    = require('./lib/readYml-lens.js')
@@ -97,13 +98,17 @@ let resizeAndWatermark = (files) => {
     .then( gis.getImgSize )
     .then( ge.getExif )
     .then( gwp.getWatermarkPosition )
+    .then( util.parallelize )
     .then( gwac.getWMAreaColor )
     .then( gc.getColor )
+    .then( util.serialize )
     .then( ct.createResizeTask )
     .then( mop.makeOutputDir )
     .then( cwp.culcSizeAndWatermarkPosition )
     .then( rm.removeFile )
+    .then( util.parallelize )
     .then( rim.resizeImg )
+    .then( util.serialize )
     .then( we.writeExif )
     .then( wxi.writeXmpAndIPTC )
     // // .then( de.debugExif )

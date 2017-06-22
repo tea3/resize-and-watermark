@@ -1,4 +1,4 @@
-fileTitle: タイトル
+fileTitle: title
 resizePix:
   - 0
   - 1024
@@ -22,6 +22,7 @@ watermark: src/sample-watermark.png
 constTag:
   - tea81p
 quality: 97
+# parallelLimit: 6
 watermarkWidthRate : 0.1
 watermarkMarginRate: 0.02
 copyright: (c) tea ( @tea0828 )

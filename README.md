@@ -8,11 +8,13 @@ This project efficiently help to process photo.
 
 ![command](src/command.png)
 
-docment: [Lightroomの後処理から数種類のリサイズと、ウォーターマークを一括処理するNode.jsを書いてみた](https://tea3.github.io/p/17/lightroom-resize-and-watermark-nodejs)
+## Document
+
+- [Lightroomの後処理から数種類のリサイズと、ウォーターマークを一括処理するNode.jsを書いてみた](https://tea3.github.io/p/17/lightroom-resize-and-watermark-nodejs)
 
 ## Example of use
 
-- [https://www.flickr.com/photos/masakazu-tea/33625299194/](https://www.flickr.com/photos/masakazu-tea/33625299194/)
+- [flickr photos](https://www.flickr.com/photos/masakazu-tea/33625299194/)
 - [Other photos](https://www.flickr.com/photos/tags/tea81p)
 
 
@@ -84,8 +86,10 @@ watermarkMarginRate: 0.02               # Watermark margin
 #   - 1.0                               # Saturation difference
 #   - 4.0                               # Luminance difference
 # defaultLens: lens:laowa105mm          # Lens keyword to enter when there is no Exif
+# parallelLimit: 4                      # Max number of processes to be processed in parallel. The value is recommended about twice the number of CPUs.
 
 quality: 97                             # JPEG quality value
+
 
 fileTitle: My Picture                   # Always a character string to be included in the IPTC title meta field
 constTag:                               # Always a character string to be included in the IPTC keywords meta field

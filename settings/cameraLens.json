@@ -29,6 +29,11 @@
       "exifName": "NIKON D7200",
       "names"   : [ "Nikon D7200" ],
       "tags"    : [ "D7200" , "NIKON" ]
+    },
+    {
+      "exifName": "iPhone 6s",
+      "names"   : [ "Apple iPhone 6s" ],
+      "tags"    : [ "iphone6s" , "APPLE" ]
     }
   ] ,
   "lens": [
@@ -39,6 +44,12 @@
       "exif" : [ [ "広角端の画角を10倍したもの" , "10" ] , [ "望遠端の画角を10倍したもの" , "10" ] , [ "広角端のF値を10倍したもの。但し、F値が整数の場合には10倍しない" , "10。但し、F値が整数の場合には1" ] , [ "望遠端のF値を10倍したもの。但し、F値が整数の場合には10倍しない" , "10。但し、F値が整数の場合には1" ] ]
     },
     {
+      "exifName": "iPhone 6s back camera 4.15mm f/2.2",
+      "names"   : [ "back camera 4.15mm" ],
+      "tags"    : [ "29mm" , "4.15mm" ],
+      "exif"    : [ [ 290 , 10 ] , [ 290 , 10 ] , [ 22 , 10 ] , [ 22 , 10 ] ]
+    },
+    {
       "exifName": "lens:sigma15mmFisheye",
       "names"   : [ "SIGMA 15mm F2.8 EX DG DIAGONAL FISHEYE" ],
       "tags"    : [ "15mm" , "fisheye" , "SIGMA" ],
@@ -46,6 +57,12 @@
     },
     {
       "exifName": "lens:tamron15-30mm",
+      "names"   : [ "TAMRON SP 15-30mm F/2.8 Di VC USD" ],
+      "tags"    : [ "15-30mm" , "TAMRON" ],
+      "exif"    : [ [ 150 , 10 ] , [ 300 , 10 ] , [ 28 , 10 ] , [ 28 , 10 ] ]
+    },
+    {
+      "exifName": "TAMRON SP 15-30mm F/2.8 Di VC USD A012",
       "names"   : [ "TAMRON SP 15-30mm F/2.8 Di VC USD" ],
       "tags"    : [ "15-30mm" , "TAMRON" ],
       "exif"    : [ [ 150 , 10 ] , [ 300 , 10 ] , [ 28 , 10 ] , [ 28 , 10 ] ]
