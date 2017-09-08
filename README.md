@@ -10,7 +10,7 @@ This project efficiently help to process photo.
 
 ## Document
 
-- [Lightroomの後処理から数種類のリサイズと、ウォーターマークを一括処理するNode.jsを書いてみた](https://tea3.github.io/p/17/lightroom-resize-and-watermark-nodejs)
+- [Lightroomの後処理から数種類のリサイズと、ウォーターマークを一括処理するNode.jsを書いてみた](https://photo-tea.com/p/17/lightroom-resize-and-watermark-nodejs)
 
 ## Example of use
 
